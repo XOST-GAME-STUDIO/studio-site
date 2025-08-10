@@ -48,13 +48,15 @@ body {
   align-items: center;
   justify-content: center;
   background: linear-gradient(120deg, var(--primary), var(--secondary));
-  color: white;
+  color: #1a1a1a;
   text-align: center;
   padding: 2rem;
 }
 
 .highlight {
-  color: yellow;
+    size: 4rem;
+    font-weight: bolder;
+  color: rgb(132, 1, 255);
 }
 
 .portfolio {
