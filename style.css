@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --primary: #00adb5;
+  --secondary: #393e46;
+  --highlight: yellow;
+  --hero-bg: linear-gradient(120deg, var(--primary), var(--secondary));
+}
+
+.dark-theme {
+  --bg: #1a1a1a;
+  --text: #e0e0e0;
+  --primary: #00cfc8;
+  --secondary: #20252b;
+  --highlight: #00e0d1;
+  --hero-bg: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* soothing dark gradient */
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--secondary);
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.navbar nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--hero-bg);
+  color: var(--text);
+  text-align: center;
+  padding: 2rem;
+  transition: background 0.4s, color 0.4s;
+}
+.highlight {
+  color: var(--highlight);
+}
+
+.portfolio {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.portfolio-card {
+  background: var(--secondary);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  background: var(--primary);
+}
+
+footer {
+  background: var(--secondary);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
