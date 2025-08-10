@@ -17,14 +17,18 @@ body {
   --text: #111111;
   --primary: #00adb5;
   --secondary: #393e46;
+  --highlight: yellow;
+  --hero-bg: linear-gradient(120deg, var(--primary), var(--secondary));
 }
 
 .dark-theme {
   --bg: #1a1a1a;
-  --text: #eeeeee;
-  --primary: #00fff5;
+  --text: #e0e0e0;
+  --primary: #00cfc8;
+  --secondary: #20252b;
+  --highlight: #00e0d1;
+  --hero-bg: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* soothing dark gradient */
 }
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -34,6 +38,13 @@ body {
   color: white;
   position: sticky;
   top: 0;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .navbar nav a {
@@ -47,16 +58,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(120deg, var(--primary), var(--secondary));
-  color: #1a1a1a;
+  background: var(--hero-bg);
+  color: var(--text);
   text-align: center;
   padding: 2rem;
+  transition: background 0.4s, color 0.4s;
 }
-
 .highlight {
-    size: 4rem;
-    font-weight: bolder;
-  color: rgb(132, 1, 255);
+  color: var(--highlight);
 }
 
 .portfolio {
